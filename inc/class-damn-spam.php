@@ -27,21 +27,31 @@ class Damn_Spam {
 	 *
 	*/
 	public function __construct() {
-		add_filter( 'pre_comment_approved', array( $this, 'damn_spam_naughty_comments', 10, 2 ) );
+		$this->damn_spam_engine();
+		$this->damn_spam_comments();
 	}
-	public function damn_spam_naughty_comments( $approved = '', $commentdata = '' ) {
-		if ( 1 === $approved ) {
-			if ( ! empty( $commentdata['comment_content'] ) ) {
-				if ( strpos( $commentdata['comment_content'], 'http' ) !== false || strpos( $commentdata['comment_content'], 'www' ) !== false ) {
-					$naughty = true;
-				}
-			}
-		}
-		if ( ! empty( $naughty ) ) {
-			return 'spam';
-		}
-		return $approved;
+
+	/**
+	 * Loader
+	 *
+	 * @since 1.0.0
+	 */
+	private function damn_spam_engine() {
+		$this->dir_path = plugin_dir_path( dirname( __FILE__ ) );
+		require_once $this->dir_path . 'inc/class-damn-spam-i18n.php';
+		require_once $this->dir_path . 'inc/class-damn-spam-comments.php';
 	}
+
+	/**
+	 * Comments
+	 *
+	 * @since 1.0.0
+	 */
+	private function damn_spam_comments() {
+		$comments = new Damn_Spam_Comments();
+		add_filter( 'pre_comment_approved', array( $comments, 'damn_spam_naughty_comments' ), 10, 2 );
+	}
+
 	/**
 	 * Translation Loader
 	 *
