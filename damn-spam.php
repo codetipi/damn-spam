@@ -1,7 +1,7 @@
 <?php
 /*!
 Plugin Name: Damn Spam
-Plugin URI: https://www.codetipi.com
+Plugin URI: https://www.github.com/codetipi/damn-spam
 Author: Codetipi
 Author URI: https://www.codetipi.com
 Description: Be gone foul spam...
