@@ -42,4 +42,14 @@ class Damn_Spam {
 		}
 		return $approved;
 	}
+	/**
+	 * Translation Loader
+	 *
+	 * @since 1.0.0
+	 */
+	public function damn_spam_locale() {
+		$i18n = new Damn_Spam_I18n();
+		add_action( 'init', array( $i18n, 'damn_spam_textdomain' ) );
+	}
+
 }
