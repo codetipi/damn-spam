@@ -34,5 +34,7 @@ Nope, no captcha needed for this.
 Nope, simply install and activate the plugin and it will immediately start working. Granular options to have more control over things will be added in upcoming updates.
 
 ## Changelog
+= 1.0.1 =
+* Added logic to filter out automated bot submissions
 = 1.0.0 =
 * Intial Release
