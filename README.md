@@ -6,6 +6,5 @@ If you're tired of having to sift through hundreds of comments to find real ones
 ## Reporting Bugs
 If you run into any issues, please let us know by [opening up a new issue here](https://github.com/codetipi/damn-spam/issues/new).
 
-## Changelog
-1.0.0
-* Intial Release
+## WordPress Repository URL
+<https://wordpress.org/plugins/damn-spam/>
