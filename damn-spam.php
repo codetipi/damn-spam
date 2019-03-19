@@ -5,7 +5,7 @@ Plugin URI: https://www.github.com/codetipi/damn-spam
 Author: Codetipi
 Author URI: https://www.codetipi.com
 Description: Be gone foul spam...
-Version: 1.0.0
+Version: 1.0.1
 Text Domain: damn-spam
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl.html
