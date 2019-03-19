@@ -49,7 +49,8 @@ class Damn_Spam {
 	 */
 	private function damn_spam_comments() {
 		$comments = new Damn_Spam_Comments();
-		add_filter( 'pre_comment_approved', array( $comments, 'damn_spam_naughty_comments' ), 10, 2 );
+		add_filter( 'pre_comment_approved', array( $comments, 'damn_spam_pre_comment_approved' ), 10, 2 );
+		add_filter( 'comment_post_redirect', array( $comments, 'damn_spam_comment_post_redirect' ), 10, 2 );
 	}
 
 	/**
