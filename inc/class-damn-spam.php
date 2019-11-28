@@ -29,6 +29,7 @@ class Damn_Spam {
 	public function __construct() {
 		$this->damn_spam_engine();
 		$this->damn_spam_comments();
+		$this->damn_spam_settings();
 	}
 
 	/**
@@ -38,6 +39,8 @@ class Damn_Spam {
 	 */
 	private function damn_spam_engine() {
 		$this->dir_path = plugin_dir_path( dirname( __FILE__ ) );
+		require_once $this->dir_path . 'inc/class-damn-spam-options.php';
+		require_once $this->dir_path . 'inc/class-damn-spam-settings.php';
 		require_once $this->dir_path . 'inc/class-damn-spam-i18n.php';
 		require_once $this->dir_path . 'inc/class-damn-spam-comments.php';
 	}
@@ -51,6 +54,15 @@ class Damn_Spam {
 		$comments = new Damn_Spam_Comments();
 		add_filter( 'pre_comment_approved', array( $comments, 'damn_spam_pre_comment_approved' ), 10, 2 );
 		add_filter( 'comment_post_redirect', array( $comments, 'damn_spam_comment_post_redirect' ), 10, 2 );
+	}
+
+	/**
+	 * Settings
+	 *
+	 * @since 1.1.0
+	 */
+	private function damn_spam_settings() {
+		new Damn_Spam_Settings();
 	}
 
 	/**
