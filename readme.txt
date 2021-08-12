@@ -4,7 +4,7 @@ License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl.html
 Tags: spam, comment spam, comment links, auto-spam links, spambot, anti-spam, damn spam
 Requires at least: 5.0
-Tested up to: 5.1.1
+Tested up to: 5.8.0
 Stable tag: 1.0.1
 
 Damn Spam is a lightweight anti-spam plugin. Currently highly opinionated - it automatically sends any new comments with links to your spam inbox
